@@ -1,0 +1,26 @@
+body {
+  /*text-align: center;*/
+  /*background-color: black;*/
+  margin: 300px 0 0 0;
+  /*color: white;*/
+}
+
+.buttonHolder {
+  text-align: center;
+}
+
+.playerA {
+  float: left;
+  font-size: 30px;
+}
+
+.playerB {
+ float: right;
+ font-size: 30px;
+
+}
+
+.scoreA .scoreB {
+  /*text-indent: 50px;*/
+}
+
