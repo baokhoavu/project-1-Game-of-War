@@ -6,8 +6,11 @@ var scoreB = document.querySelector('.scoreB')
 
 var deckA = [];
 var deckB = [];
-// var handA = [];
-// var handB = [];
+var handA = [];
+var handB = [];
+
+var cardA;
+var carbB;
 
 scoreA.innerHTML = 0
 scoreB.innerHTML = 0
@@ -19,7 +22,6 @@ var makeaDeck = function() {
   var A = 1
   var numCards = [A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K]
   var suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
-
   var Hearts = value.map(function(value) {
     return value + ' of Hearts';
   })
@@ -77,12 +79,8 @@ var eachRound = function(cardA, cardB) {
   }
 }
 
-var cardA;
-var carbB;
-
 var buttonGo = document.querySelector('.go');
 var buttonStart = document.querySelector('.start')
-
 
 buttonStart.addEventListener('click', makeaDeck)
 buttonStart.addEventListener('click', shuffleandSetup)
