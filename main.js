@@ -16,25 +16,25 @@ scoreA.innerHTML = 0
 scoreB.innerHTML = 0
 
 var makeaDeck = function() {
-  var J = 11
-  var Q = 12
-  var K = 13
-  var A = 1
-  var numCards = [A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K]
-  var suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
-  var Hearts = value.map(function(num) {
-    return num + ' of Hearts';
-  })
-  var Diamonds = value.map(function(num) {
-    return num + ' of Diamonds';
-  })
-  var Spades = value.map(function(num) {
-    return num + ' of Clubs';
-  })
-  var Clubs = value.map(function(num) {
-    return num + ' of Spades';
-  })
-  var deck = Hearts.concat(Clubs, Diamonds, Spades)
+  // var J = 11
+  // var Q = 12
+  // var K = 13
+  // var A = 1
+  var numCards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14]
+  // var suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
+  // var Hearts = numCards.map(function(num) {
+  //   return num + ' of Hearts';
+  // })
+  // var Diamonds = numCards.map(function(num) {
+  //   return num + ' of Diamonds';
+  // })
+  // var Spades = numCards.map(function(num) {
+  //   return num + ' of Clubs';
+  // })
+  // var Clubs = numCards.map(function(num) {
+  //   return num + ' of Spades';
+  // })
+  // var deck = Hearts.concat(Clubs, Diamonds, Spades)
 }
 
 var shuffle = function(deck) {
@@ -68,6 +68,9 @@ var shuffleandSetup = function(deck) {
 };
 
 var eachRound = function(cardA, cardB) {
+
+
+
   fieldA.appendChild(cardA)
   fieldB.appendChild(cardB)
   if (cardA > cardB) {
@@ -90,12 +93,12 @@ var eachRound = function(cardA, cardB) {
     // draw a card from deckB
     // potB.push(drawn card);
     // draw card from deckB
-    potA[2] > potB[2]
-        scoreA + 1;
-        deckA.push potA.concat(PotB);
-      } else {
-        scoreB + 1;
-        deckB = potA.concat(PotB);
+    // potA[2] > potB[2]
+      //   scoreA + 1;
+      //   deckA.push potA.concat(PotB);
+      // } else {
+      //   scoreB + 1;
+      //   deckB = potA.concat(PotB);
     }
   }
 }
