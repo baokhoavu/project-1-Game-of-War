@@ -4,7 +4,11 @@
   /*margin: 300px 0 0 0;*/
   /*color: white;*/
 /*}*/
-/*
+
+body {
+  background-color: #BCB696;
+}
+
 .buttonHolder {
   text-align: center;
 }
@@ -20,7 +24,19 @@
 
 }
 
-.scoreA .scoreB {*/
+.scoreA .scoreB {
   /*text-indent: 50px;*/
 }
 
+.card {
+  display: inline-block;
+  width: 150px;
+  height: 200px;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 100px;
+  margin: 30px 20px 20px 60px;
+  border: 1px solid black;
+  background-color: green;
+
+}
