@@ -1,4 +1,4 @@
-var deal = document.querySelector('.deal')
+// var deal = document.querySelector('.deal')
 var playerA = document.querySelector('.playerA')
 var playerB = document.querySelector('.playerB')
 var scoreA = document.querySelector('.scoreA')
@@ -6,24 +6,22 @@ var scoreB = document.querySelector('.scoreB')
 
 var deckA = [];
 var deckB = [];
-var handA = [];
-var handB = [];
-var
+// var handA = [];
+// var handB = [];
+
 scoreA.innerHTML = 0
 scoreB.innerHTML = 0
 
 var makeaDeck = function() {
-  // var J = 11
-  // var Q = 12
-  // var K = 13
-  // var A = 14
-
-  var value = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+  var J = 11
+  var Q = 12
+  var K = 13
+  var A = 1
+  var numCards = [A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K]
   var suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
-  // deck = [];
 
-  var Hearts = value.map(function(num) {
-    return num + ' of Hearts';
+  var Hearts = value.map(function(value) {
+    return value + ' of Hearts';
   })
   var Diamonds = value.map(function(num) {
     return num + ' of Diamonds';
@@ -48,7 +46,9 @@ var shuffleandSetup = function() {
   }
 };
 
-var declareAttack = function(cardA, cardB) {
+var eachRound = function(cardA, cardB) {
+  fieldA.appendChild(cardA)
+  fieldB.appendChild(cardB)
   if (cardA > cardB) {
     scoreA + 1;
     deckA.push(cardA);
@@ -61,11 +61,11 @@ var declareAttack = function(cardA, cardB) {
   function war () {
     potA = [];
     potA.push(cardA);
-    // potA.push(deckA);
+    potA.push(deckA);
     handA.push(deckA);
     potB = [];
     potB.push(cardB);
-    // potB.push(deckB);
+    potB.push(deckB);
     handB.push(deckB);
       if (handA > handB) {
         scoreA + 1;
@@ -80,9 +80,12 @@ var declareAttack = function(cardA, cardB) {
 var cardA;
 var carbB;
 
-// Page 1
-button.addEventListener('click', Start)
-// Page 2
-button1.addEventListener('click', makeaDeck)
-button1.addEventListener('click', shuffleandSetup)
-button2.addEventListener('click', declareAttack)
+var buttonGo = document.querySelector('.go');
+var buttonStart = document.querySelector('.start')
+
+
+buttonStart.addEventListener('click', makeaDeck)
+buttonStart.addEventListener('click', shuffleandSetup)
+// // Page 2
+
+// button2.addEventListener('click', declareAttack)
