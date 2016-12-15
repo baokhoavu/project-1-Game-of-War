@@ -15,12 +15,13 @@ var carbB;
 scoreA.innerHTML = 0
 scoreB.innerHTML = 0
 
-var makeaDeck = function() {
+var deck = [1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 8, 8, 8, 8, 9, 9, 9, 9, 10, 10, 10, 10, 11, 11, 11, 11, 12, 12, 12, 12, 13, 13, 13, 13]
+// var makeaDeck = function() {
   // var J = 11
   // var Q = 12
   // var K = 13
   // var A = 1
-  var numCards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14]
+  // var numCards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
   // var suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
   // var Hearts = numCards.map(function(num) {
   //   return num + ' of Hearts';
@@ -35,7 +36,7 @@ var makeaDeck = function() {
   //   return num + ' of Spades';
   // })
   // var deck = Hearts.concat(Clubs, Diamonds, Spades)
-}
+// }
 
 var shuffle = function(deck) {
   // .shuffle(deck); Have not downloaded jQuery yet. This is the shuffle command
@@ -69,19 +70,17 @@ var shuffleandSetup = function(deck) {
 
 var eachRound = function(cardA, cardB) {
 
-
-
-  fieldA.appendChild(cardA)
-  fieldB.appendChild(cardB)
-  if (cardA > cardB) {
-    scoreA + 1;
-    deckA.push(cardA);
-    deckA.push(cardB);
-  } else if (cardA < cardB) {
-    scoreB + 1;
-    deckB.push(cardA);
-    deckB.push(cardB);
-  } else {
+  // fieldA.appendChild(cardA)
+  // fieldB.appendChild(cardB)
+  // if (cardA > cardB) {
+  //   scoreA + 1;
+  //   deckA.push(cardA);
+  //   deckA.push(cardB);
+  // } else if (cardA < cardB) {
+  //   scoreB + 1;
+  //   deckB.push(cardA);
+  //   deckB.push(cardB);
+  // } else {
     // this is war
     potA = [];
     // potA.push(cardA);
@@ -100,13 +99,13 @@ var eachRound = function(cardA, cardB) {
       //   scoreB + 1;
       //   deckB = potA.concat(PotB);
     }
-  }
-}
+  // }
+// }
 
 var buttonGo = document.querySelector('.go');
 var buttonStart = document.querySelector('.start')
 
-buttonStart.addEventListener('click', makeaDeck)
+// buttonStart.addEventListener('click', makeaDeck)
 buttonStart.addEventListener('click', shuffleandSetup)
 // // Page 2
 
