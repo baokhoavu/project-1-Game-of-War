@@ -15,7 +15,6 @@ var carbB;
 scoreA.innerHTML = 0
 scoreB.innerHTML = 0
 
-var deck = [1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 8, 8, 8, 8, 9, 9, 9, 9, 10, 10, 10, 10, 11, 11, 11, 11, 12, 12, 12, 12, 13, 13, 13, 13]
 // var makeaDeck = function() {
   // var J = 11
   // var Q = 12
@@ -39,8 +38,7 @@ var deck = [1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6,
 // }
 
 var shuffle = function(deck) {
-  // .shuffle(deck); Have not downloaded jQuery yet. This is the shuffle command
-
+var deck = [1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 8, 8, 8, 8, 9, 9, 9, 9, 10, 10, 10, 10, 11, 11, 11, 11, 12, 12, 12, 12, 13, 13, 13, 13]
   // next card function
   var currentIndex = deck.length, tempCard, randomIndex;
 
@@ -69,7 +67,8 @@ var shuffleandSetup = function(deck) {
 };
 
 var eachRound = function(cardA, cardB) {
-
+  var handA = deckA.shift()
+  var handB = deckB.shift()
   // fieldA.appendChild(cardA)
   // fieldB.appendChild(cardB)
   // if (cardA > cardB) {
@@ -102,11 +101,13 @@ var eachRound = function(cardA, cardB) {
   // }
 // }
 
-var buttonGo = document.querySelector('.go');
+var buttonHit = document.querySelector('.hit');
 var buttonStart = document.querySelector('.start')
 
 // buttonStart.addEventListener('click', makeaDeck)
+buttonStart.addEventListener('click', shuffle)
 buttonStart.addEventListener('click', shuffleandSetup)
+
 // // Page 2
 
 // button2.addEventListener('click', declareAttack)
