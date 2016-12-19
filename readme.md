@@ -35,3 +35,5 @@ Your app must:
 - Sound Effects
 - Animated
 - Image displayed for values
+- Starting/Game/Result Page transitioning through links
+- Change contenteditable for players without moving elements

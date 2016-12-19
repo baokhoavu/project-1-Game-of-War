@@ -38,13 +38,15 @@ var deck = [2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7,
 */
 var shuffleandSetup = function(deck) {
   deck = shuffle(deck);
-  for (var i = 0; i < deck.length; i++) {
-    if ( i % 2 === 0){
-      deckA.push(deck[i]);
-  } else {
-      deckB.push(deck[i]);
-    }
-  };
+  while(deckA.length === 0 || deckB.length === 0) {
+    for (var i = 0; i < deck.length; i++) {
+      if ( i % 2 === 0){
+        deckA.push(deck[i]);
+    } else {
+        deckB.push(deck[i]);
+      };
+    };
+  } {once: true} shuffleandSetup.removeEventListener
 }
 
 /** this function takes a card from each deck and places them on the board
