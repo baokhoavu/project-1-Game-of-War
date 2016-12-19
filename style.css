@@ -12,7 +12,8 @@ body {
   font-size: 30px;
   color: #BCB696;
   text-shadow: 2px 2px 8px black;
-  font-size: 40px;
+  font-size: 60px;
+  font-family: Pirata One;
 
 }
 
@@ -21,7 +22,8 @@ body {
  font-size: 30px;
  color: #C0B989;
  text-shadow: 2px 2px 8px black;
- font-size: 40px;
+ font-size: 60px;
+ /*font-family: Pirata One;*/
 
 }
 
@@ -45,7 +47,7 @@ body {
   vertical-align: middle;
   text-align: center;
   line-height: 100px;
-  margin: 100px 20px 20px 100px;
+  margin: 100px 20px 20px 35px;
   border: 1px solid black;
   background-color: green;
   background-image: url('https://s-media-cache-ak0.pinimg.com/564x/75/69/61/7569619b471a336cf8c9767ba3e7bf89.jpg');
