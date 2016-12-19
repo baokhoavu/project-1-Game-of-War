@@ -3,6 +3,8 @@ var playerA = document.querySelector('.playerA')
 var playerB = document.querySelector('.playerB')
 var handA = document.querySelector('.handA')
 var handB = document.querySelector('.handB')
+var scoreA = document.querySelector('.scoreA')
+var scoreB = document.querySelector('.scoreB')
 
 var arena1 = [];
 var arena2 = [];
@@ -129,6 +131,8 @@ var compareCards = function() {
   } else {
     console.log('Gewd Luck..')
   }
+    scoreA.innerHTML = deckA.length;
+    scoreB.innerHTML = deckB.length;
 }
 /** this function expression is for war
   * sets up 2 empty Arrays as Holders for Repeat-Wars
@@ -171,57 +175,6 @@ function war(wararenaA, wararenaB) {
   }
 }
 
-
-
-
-// var eachRound = function() {
-//   // each player adds a card to the arena
-//   handA = deckA.shift()
-//   handB = deckB.shift()
-//   console.log('Captain Morgan ' + handA);
-//   console.log('Jack Daniel ' + handB);
-//   // fieldA.appendChild(cardA)
-//   // fieldB.appendChild(cardB)
-//   if (handA > handB) {
-//     console.log('Captain Morgan Wins!');
-//     deckA.push(handA);
-//     deckA.push(handB);
-//     console.log("Captain Morgan's Deck: " + deckA.length);
-//     console.log("Jack Daniel's Deck: " + deckB.length);
-//   }
-//   else if (handA < handB) {
-//     console.log('Jack Daniel Wins!');
-//     deckB.push(handA);
-//     deckB.push(handB);
-//     console.log("Captain Morgan's Deck: " + deckA.length);
-//     console.log("Jack Daniel's Deck: " + deckB.length);
-//   }
-//   // war
-//   else if (handA === handB) {
-//     console.log('Waaaar!!!!');
-//     pot.push(handA);
-//     pot.push(handB);
-//     pot.push(deckA.shift());
-//     pot.push(deckB.shift());
-//     handA = deckA.shift();
-//     handB = deckB.shift();
-//     if(handA > handB) {
-//       deckA.push(handA);
-//       deckA.push(handB);
-//       deckA = deckA.concat(pot);
-//       console.log('Captain Morgan Wins!');
-//       console.log("Captain Morgan's Deck: " + deckA.length);
-//       console.log("Jack Daniel's Deck: " + deckB.length);
-//     } else {
-//       deckB.push(handA);
-//       deckB.push(handB);
-//       deckB = deckB.concat(pot);
-//       console.log('Jack Daniel Wins!')
-//       console.log("Captain Morgan's Deck: " + deckA.length);
-//       console.log("Jack Daniel's Deck: " + deckB.length);
-//     };
-//   };
-// }
 
 var buttonHit = document.querySelector('.hit');
 var buttonStart = document.querySelector('.start')

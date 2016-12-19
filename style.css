@@ -115,11 +115,11 @@ body {
   line-height: 25px;
   margin: 0px 20px 20px 145px;
   border: 1px solid black;
-  background-color: rgba(187, 182, 149, 0.45);
+  background-color: rgba(187, 182, 149, 0.75);
   font-weight: bold;
   font-size: 20px;
   color: black;
-  text-shadow: 2px 2px 8px #4f5336;
+  /*text-shadow: 2px 2px 8px #4f5336;*/
 }
 
 
