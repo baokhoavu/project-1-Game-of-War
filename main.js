@@ -45,7 +45,8 @@ var shuffleandSetup = function(deck) {
     } else {
         deckB.push(deck[i]);
       };
-    };
+    } scoreA.innerHTML = deckA.length;
+      scoreB.innerHTML = deckB.length;
   } {once: true} shuffleandSetup.removeEventListener
 }
 
@@ -75,12 +76,8 @@ var addCardsToArena = function() {
 var compareCards = function() {
   if (arena1 > arena2) {
     deckA = deckA.concat(arena1, arena2);
-    console.log('CM deck => ', deckA.length);
-    console.log('JD deck => ', deckB.length);
   } else if (arena2 > arena1) {
     deckB = deckB.concat(arena2, arena1);
-    console.log('CM deck => ', deckA.length);
-    console.log('JD deck => ', deckB.length);
   } else if (arena1 === arena2 || arena2 === arena1) {
       war();
   } else if (deckA > 51 || deckB < 1) {
